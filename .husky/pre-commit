@@ -1,4 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+npx eslint . --fix
+git add .
+
 npx eslint .
