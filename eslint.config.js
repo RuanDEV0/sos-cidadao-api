@@ -14,7 +14,6 @@ export default [
     rules: {
       semi: ['error', 'always'],
       quotes: ['error', 'single'],
-      indent: ['error', 2],
       'no-multiple-empty-lines': ['error', { max: 1 }],
       'comma-dangle': ['error', 'always-multiline'],
       'object-curly-spacing': ['error', 'always'],
