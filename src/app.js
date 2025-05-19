@@ -1,20 +1,10 @@
 import express from 'express';
-import routes from './routes.js';
-class App{
-  constructor(){
-    this.server = express();
+import routes from './interfaces/routes/routes.js';
 
-    this.middlewares();
-    this.routes();
-  }
+const app = express();
 
-  middlewares(){
-    this.server.use(express.json());
-  }
+app.use(express.json());
 
-  routes(){
-    this.server.use(routes);
-  }
-}
+app.use('/sos-cidadao', routes);
 
-export default new App().server;
+export default app;
